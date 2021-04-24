@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +14,9 @@ namespace Chess
             string PieceName = input[0];
             string Position = input[1];
             var piece = PieceCreator.GetPiece(PieceName, Position);
-            var possibleMoves = piece.GetAllPossibleMove();
+            var possibleMoves = piece.GetAllPossibleMove().Select(x => x.BoardValue).ToList(); ;
+            string combindedString = string.Join(",", possibleMoves);
+            Console.WriteLine("possible moves are " +combindedString);
             
         }
     }

@@ -8,7 +8,7 @@ namespace Chess
         public static List<string> GetPossibleMoves(string piecewithposition)
         {
             
-            var input = piecewithposition.Split(' '); //Console.ReadLine().Trim().Split(' ');
+            var input = piecewithposition.Split(' ');
             string PieceName = input[0];
             string Position = input[1];
             var piece = PieceCreator.GetPiece(PieceName, Position);

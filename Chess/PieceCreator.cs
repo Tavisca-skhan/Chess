@@ -9,12 +9,22 @@ namespace Chess
         {
             if (Enum.TryParse(name, true, out Pieces Piece))
             {
-                var currCell = new Cell(curr);
+                var currCell = new Cell(curr.ToUpper());
                 if (currCell.IsValidPosition() == false) throw new Exception("given position is invalid");
                 switch (Piece)
                 {
                     case Pieces.King:
                         return new King(currCell);
+                    case Pieces.Queen:
+                        return new Queen(currCell);
+                    case Pieces.Horse:
+                        return new Horse(currCell);
+                    case Pieces.Rook:
+                        return new Rook(currCell);
+                    case Pieces.Pawn:
+                        return new Pawn(currCell);
+                    case Pieces.Bishop:
+                        return new Bishop(currCell);
 
 
                     default:

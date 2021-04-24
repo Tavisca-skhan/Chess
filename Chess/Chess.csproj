@@ -54,7 +54,6 @@
     <Compile Include="Models\Queen.cs" />
     <Compile Include="Models\Rook.cs" />
     <Compile Include="PieceCreator.cs" />
-    <Compile Include="Models\Pieces.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

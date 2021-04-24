@@ -7,4 +7,14 @@ namespace Chess.Models
        List<Cell> GetAllPossibleMove();
        
     }
+    public enum Pieces
+    {
+
+        King,
+        Queen,
+        Rook,
+        Horse,
+        Pawn,
+        Bishop
+    }
 }
