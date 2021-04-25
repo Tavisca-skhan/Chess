@@ -9,7 +9,7 @@ namespace Chess.Models
     public sealed class Movement
     {
          Movement() { }
-        private Movement movement;
+         
         
         private static readonly object padlock = new object();
         private static Movement instance = null;
@@ -34,7 +34,7 @@ namespace Chess.Models
             var cells = new List<Cell>();
             for (int i = 1; i <= boundry; i++)
             {
-                int row = curr.Row + i;
+                int row = curr.Row -i;
                 int column = curr.Column;
                 var newcell = new Cell(row, column);
                 if (newcell.IsValidPosition() == false) break;
@@ -48,7 +48,7 @@ namespace Chess.Models
             var cells = new List<Cell>();
             for (int i = 1; i <= boundry; i++)
             {
-                int row = curr.Row -i;
+                int row = curr.Row +i;
                 int column = curr.Column;
                 var newcell = new Cell(row, column);
                 if (newcell.IsValidPosition() == false) break;

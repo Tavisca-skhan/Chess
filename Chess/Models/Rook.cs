@@ -13,8 +13,11 @@ namespace Chess.Models
         {
 
             var cells = new List<Cell>();
-
-
+            var moveMent = Movement.GetInstance();
+            cells.AddRange(moveMent.GetPossibleMoveOfDown(Current, 8));
+            cells.AddRange(moveMent.GetPossibleMoveOfUp(Current, 8));
+            cells.AddRange(moveMent.GetPossibleMoveOfRight(Current, 8));
+            cells.AddRange(moveMent.GetPossibleMoveOfLeft(Current, 8));
             return cells;
 
 
